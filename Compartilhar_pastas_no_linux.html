@@ -11,7 +11,7 @@
         :root {
             --vermelho: #ff0000;
             --azul1: #0000ff;
-            --azul2: #4949ff;
+            --azul2: #4949ff;            
         }
 
         body {
@@ -54,16 +54,21 @@
     <main>
         <p>
             <p class="paragrafo">
-                Antes de inicializar a configuração do arquivo do Samba é recomendável executar:
+                Antes de inicializar a instalação e configuração do arquivo do Samba é recomendável executar:
                 <pre>
                     <b>sudo apt update</b>
                     
                     <b>sudo apt upgrade</b>
+
+                    <b>sudo apt install net-tools</b>  [Instala ferramentas de rede]
+
+                    <b>sudo apt install samba</b>
                 </pre>
             </p>
             <p class="paragrafo">
                 Após a instalação do samba recomenda-se copiar o arquivo smb.config e executar as seguintes modificações em smb.congig.
                 <pre>
+                    <b>cd /etc/samba</b>
                     <b>sudo cp smb.conf smb.conf.bk</b>
                 </pre>
             </p>
@@ -107,20 +112,20 @@
         #    enough to be mentioned here
         #
         # NOTE: Whenever you modify this file you should run the command
-        # "testparm" to check that you have not made any basic syntactic 
+        # "<span class="atencao2">testparm</span>" to check that you have not made any basic syntactic 
         # errors. 
         
         #======================= <span class="atencao2">Global Settings</span> =======================
         
         [global]
         
-        ## Browsing/Identification ###
+        <span class="atencao2">## Browsing/Identification ###</span>
         
         # Change this to the workgroup/NT-domain name your Samba server will part of
            <span class="atencao1">workgroup = home</span>
            <abbr title="Nome para DESCOBRIMENTO na Rede"><span class="atencao1">netbios name = servidor</span></abbr>
         
-        # server string is the equivalent of the NT Description field
+        <span class="atencao2"># server string is the equivalent of the NT Description field</span>
            server string = %h server (Samba, Ubuntu)
         
         #### Networking ####
@@ -259,7 +264,7 @@
         # public shares, not just authenticated ones
            usershare allow guests = yes
         
-        #======================= Share Definitions =======================
+        <span class="atencao2">#======================= Share Definitions =======================</span>
         
         # Un-comment the following (and tweak the other settings below to suit)
         # to enable the default home directory shares. This will share each
@@ -308,7 +313,7 @@
         ;   create mask = 0600
         ;   directory mask = 0700
         
-        [printers]
+        <span class="atencao2">[printers]</span>
            comment = All Printers
            browseable = no
            path = /var/tmp
@@ -331,8 +336,8 @@
         # Please note that you also need to set appropriate Unix permissions
         # to the drivers directory for these users to have write rights in it
         ;   write list = root, @lpadmin
-        <span class="atencao2">[Arquivos]</span>
-        path = /home/borges/util
+        <abbr title="O nome da PASTA DE REDE não precisa ser o MESMO da PASTA COMPARTILHADA"><span class="atencao2">[Arquivos]</span></abbr>
+        <span class="atencao1">path</span> = /home/borges/<span class="atencao2">util</span>
         <abbr title="O Compartilhamento será público">public = yes</abbr>
         <abbr title="A pasta será navegável">browseable = yes</abbr>
         <abbr title="A paste tem permissão de escrita">writable = yes</abbr>
@@ -343,8 +348,8 @@
         <abbr title="Arquivos criados nesta pasta terão mascara 0700 - Leitura/Escrita/Execução">creat mask = 0700</abbr>
         <abbr title="Pastas criadas terão mascara 0700">directory mask = 0700</abbr>
         
-        <span class="atencao2">[Digitalizacoes]</span>
-        path = /home/borges/Documentos/DIGITALIZACOES
+        <abbr title="O nome da PASTA DE REDE não precisa ser o MESMO da PASTA COMPARTILHADA"><span class="atencao2">[Digitalizacoes]</span></abbr>
+        <span class="atencao1">path</span> = /home/borges/Documentos/<span class="atencao2">DIGITALIZACOES</span>
         public = yes
         browseable = yes
         writable = yes

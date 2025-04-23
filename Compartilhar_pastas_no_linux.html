@@ -82,7 +82,7 @@
                 É importante lembrar que após todas as configurações serem feitas a permissão de usuário deve ser dada para que o serviço do samba possa acessar a pasta compartilhada. E todo o serviço deve ser REINICIAZADO caso contrário o procedimento não será executado. <span class="atencao1">Obs:</span> será necessário saber o ip que o compartilhamento está usando
                 <pre>
                 <b>
-                    sudo system restart smbd
+                    sudo systemctl restart smbd
                     sudo smbpasswd -a [nome do usuário do computador]
                     ifconfig
                 </b>

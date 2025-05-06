@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicas Linux</title>
+</head>
+<body>
+    <h1>Dicas Linux</h1>
+    <h2>HD Externo Não é Reconhecido: Ubuntu</h2>
+    <h3>Primeira opção:</h3>
+    <ol>
+        <li>
+            Abrir o Programa Disc (discos)
+        </li>
+        <li>
+            Procurar o HD que não está sendo reconhecido e procurar no menu a <b>FORMA DE MONTAGEM</b> do HD
+        </li>
+        <li>
+            Desligar a forma padrão do usuário
+        </li>
+        <li>
+            Abaixo do ícone simbólico adicionar: [<b>,ro</b>] (sem os colchetes)
+        </li>
+    </ol>
+    <h3>Segunda opção:</h3>
+    <ol>
+        <li>Abrir o programa disc (discos) do Linux e procurar a identificação do caminho do HD não reconhecido</li>
+        <li>
+            Corrigir um provável erro no sistema de arquivos com o comando:
+            <pre>
+sudo ntfsfix "caminho do seu dispositivo"
+            </pre>
+        </li>
+    </ol>
+    
+</body>
+</html>

@@ -1,0 +1,16 @@
+&lt;!DOCTYPE html>
+&lt;html lang="pt-br">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" content="width=p, initial-scale=1.0">
+    &lt;title>Abertura de links&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;h1>Teste de Abertura de 2 Links ao mesmo tempo&lt;/h1>
+    &lt;p>
+        Clique &lt;a href="pag001.html" target="_blank" onclick=" location.href = 'pag002.html'">
+            aqui
+        &lt;/a> para um teste.
+    &lt;/p>
+&lt;/body>
+&lt;/html>

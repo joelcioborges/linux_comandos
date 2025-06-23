@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,11 +73,17 @@
                 </pre>
             </p>
             <p class="paragrafo">
+                Após a cópia do arquivo de configuração do Samba ter sido feita, o original poderá ser modificado com o qualquer editor. Aqui recomenda-se usar o nano seguindo o exemplo demostrado.
+                <pre>
+                    <b>sudo nano smb.conf</b>
+                </pre>
+            </p>
+            <p class="paragrafo">
                 A pasta a ser compartilhada deve ter a permissão máxima do sistema, então, caso não tenha o comando abaixo deve ser executado.
                 <pre>
                     <b>sudo chmd 777 [/nome da pasta]</b>
                 </pre>
-            </p>
+            </p>            
             <p class="paragrafo">
                 É importante lembrar que após todas as configurações serem feitas a permissão de usuário deve ser dada para que o serviço do samba possa acessar a pasta compartilhada. E todo o serviço deve ser REINICIAZADO caso contrário o procedimento não será executado. <span class="atencao1">Obs:</span> será necessário saber o ip que o compartilhamento está usando
                 <pre>

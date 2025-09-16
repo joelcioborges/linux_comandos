@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Segundo Teste de botão </title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+        }
+
+        main {
+            position: relative;
+            height: 100vh;
+            background: url(imagens/fundo-madeira.jpg) no-repeat center top;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        section#ajuste-secao-01 {
+            width: 650px;
+            height: 600px;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        section#ajuste-secao-02 {
+            text-align: right;
+            transform: translateY(10%);
+        }
+        
+        .botao-efeito {
+            width: 180px;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 50%;
+            box-sizing: border-box;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            /* Transição suave */
+            transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out; 
+        }
+        .botao-efeito:hover {
+            border: 2px solid rgba(255, 255,255, 0.6);    
+            background-color: rgba(255, 255, 0, 0.521);
+            transform: translate(-3px, -3px);
+            transition: 0.2s, border 1s;           
+        }
+        .botao-efeito:active {
+            background-color: red; /* Cor ao ser clicado */
+            box-sizing: border-box;
+            /* transform: translateY(3px); /* Efeito de afundamento */
+            /* transform: translateX(3px); Efeito de afundamento */
+            transform: translate(3px, 3px);
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <section id="ajuste-secao-01">
+
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, eveniet magni quaerat expedita accusamus incidunt distinctio beatae recusandae fuga quibusdam dolores natus doloribus ea consequuntur, architecto hic? Quis, maxime dolore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae culpa laudantium, deleniti dignissimos, quia eos dolorum facere harum illo odit, veniam quis? Dignissimos quos atque, incidunt libero asperiores aliquid! Aliquam.
+            </p>
+            <br>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias natus harum quaerat mollitia ipsum, rerum corrupti quos sed numquam, tempore earum veniam tempora ipsa magni a odit provident dolores nisi? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique ab, aliquam veritatis, sint sapiente, delectus temporibus corporis cumque eius sunt quas suscipit beatae. Eaque obcaecati ea modi illo quo iusto.
+            </p>
+            <br>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, necessitatibus. Itaque, enim harum facere repudiandae nihil recusandae officiis eum omnis numquam voluptas delectus sed odit, excepturi perferendis a neque! Aut. lo Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nam? Ab qui voluptatibus numquam, omnis officiis velit quidem dolorem? Provident, consequuntur. Voluptatum magni voluptate ut ea nobis officia laborum qui. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident tenetur quis voluptas perferendis doloremque adipisci exercitationem dolorem! Odit saepe, ad quisquam sapiente consequuntur dolor vero quae, deserunt laborum excepturi expedita.
+            </p>
+                        
+        </section>
+        <section id="ajuste-secao-02">
+            <img class="botao-efeito" src="imagens/logo-home.jpg" alt=""> <br>
+            <img class="botao-efeito" src="imagens/cursoemvideo.png" alt=""> <br>
+            <img class="botao-efeito" src="imagens/logo-instagram.jpg" alt=""> <br>
+        </section>        
+        
+    </main>
+    
+</body>
+</html>

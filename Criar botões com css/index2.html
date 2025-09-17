@@ -13,7 +13,7 @@
         body {
             width: 100vw;
             height: 100vh;
-            background-color: black;
+            background-color: black;            
         }
 
         main {
@@ -25,14 +25,17 @@
         }
 
         section#ajuste-secao-01 {
-            width: 650px;
-            height: 600px;
-            background-color: white;
             position: absolute;
+            width: 650px;            
+            height: 600px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: white;            
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            text-align: center;
+            text-align: justify;
+            text-indent: 20px;
         }
         section#ajuste-secao-02 {
             text-align: right;
@@ -40,6 +43,7 @@
         }
         
         .botao-efeito {
+            /* tamanho do botão */
             width: 180px;
             padding: 10px 20px;
             margin: 10px;
@@ -60,10 +64,10 @@
             transition: 0.2s, border 1s;           
         }
         .botao-efeito:active {
-            background-color: red; /* Cor ao ser clicado */
+            /* Cor ao ser clicado */
+            background-color: red; 
             box-sizing: border-box;
-            /* transform: translateY(3px); /* Efeito de afundamento */
-            /* transform: translateX(3px); Efeito de afundamento */
+            /* Efeito de afundamento */            
             transform: translate(3px, 3px);
         }
         
@@ -87,9 +91,26 @@
                         
         </section>
         <section id="ajuste-secao-02">
-            <img class="botao-efeito" src="imagens/logo-home.jpg" alt=""> <br>
-            <img class="botao-efeito" src="imagens/cursoemvideo.png" alt=""> <br>
-            <img class="botao-efeito" src="imagens/logo-instagram.jpg" alt=""> <br>
+            <a href="#" target="_blank" rel="external">
+                <img class="botao-efeito"
+                    src="imagens/logo-home.jpg"
+                    onmouseover="this.src='imagens/Home-Icon.gif'"
+                    onmouseout="this.src='imagens/logo-home.jpg'"
+                    alt="Home teste">
+            </a>
+             <br>
+            <a href="https://www.cursoemvideo.com/" target="_blank" rel="external">
+                <img class="botao-efeito"
+                    src="imagens/cursoemvideo.png"
+                    alt="Curso em video teste">
+            </a>
+            <br>
+            <a href="#" target="_blank" rel="external">
+                <img class="botao-efeito"
+                    src="imagens/logo-instagram.jpg"
+                    alt="Instagram">
+            </a>
+             <br>
         </section>        
         
     </main>

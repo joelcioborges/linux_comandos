@@ -5,26 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário - 005</title>
     <style>
+        :root {
+            --branco: #ffffff;
+            --preto: #000000;
+            --preto-mais-claro: #2b2b2b;
+            --branco-acinzentado: #e1dede;
+
+            --verde-botao-normal: #4CAF50;
+            --verde-botao-clicado: #3e8e41;
+            --amarelo-botao-normal: #acb506;
+            --amarelo-botao-clicado: #cac40c;
+            --vermelho-botao-normal: #c31b05;
+            --vermelho-botao-clicado: #f81403;
+        }
+
         fieldset{
-            border: 2px solid black;
+            border: 2px solid var(--preto);
             border-radius: 5px;
-            background-color: rgb(225, 222, 222);
+            background-color: var(--branco-acinzentado);
             box-shadow: 2px 2px 5px rgba(0,0,0,400);
             margin-top: 8px;
         }
         legend {
-            color: white;
+            color: var(--branco);
             font-weight: bolder;
-            background-color: rgb(43, 43, 43);
+            background-color: var(--preto-mais-claro);            
             border-radius: 5px;
             padding-left: 10px;
             padding-right: 10px;
         }
 
         .botao-personalizado-enviar {
-            background-color: #4CAF50;
+            background-color: var(--verde-botao-normal);
             border: none;
-            color: white;
+            color: var(--branco);
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
@@ -39,15 +53,15 @@
             box-shadow: 2px 2px 5px rgba(0,0,0, 0.623);
         }
         .botao-personalizado-enviar:active {
-            background-color: #3e8e41;
+            background-color: var(--verde-botao-clicado);
             box-shadow: 0px 0px 0px rgba(0,0,0, 0.623);
             transform: translate(2px, 2px);
         }
 
         .botao-personalizado-limpar {
-            background-color: #acb506;
+            background-color: var(--amarelo-botao-normal);            
             border: none;
-            color: white;
+            color: var(--branco);
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
@@ -62,15 +76,15 @@
             box-shadow: 2px 2px 5px rgba(0,0,0, 0.623);
         }
         .botao-personalizado-limpar:active {
-            background-color: #cac40c;
+            background-color: var(--amarelo-botao-clicado);
             box-shadow: 0px 0px 0px rgba(0,0,0, 0.623);
             transform: translate(2px, 2px);
         }
 
         .botao-personalizado-cancelar {
-            background-color: #c31b05;
+            background-color: var(--vermelho-botao-normal);
             border: none;
-            color: white;
+            color: var(--branco);
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
@@ -86,7 +100,7 @@
             
         }
         .botao-personalizado-cancelar:active {
-            background-color: #f81403;
+            background-color: var(--vermelho-botao-clicado);
             box-shadow: 0px 0px 0px rgba(0,0,0, 0.623);
             transform: translate(2px, 2px);
         }
@@ -97,26 +111,47 @@
     <form action="cadastro.php" method="get" autocomplete="on">
         <fieldset>
             <legend> Sexo </legend>
-            <input type="radio" name="sexo" id="isexomasculino"  value="M" checked> 
+            <input 
+                type="radio" 
+                name="sexo" id="isexomasculino"  
+                value="M" checked
+            > 
             <label for="isexomasculino"> Masculino </label> <br>
-            <input type="radio" name="sexo" id="isexofeminino" value="F">
+            <input 
+                type="radio" 
+                name="sexo" id="isexofeminino" 
+                value="F"
+            >
             <label for="isexofeminino"> Feminino </label> <br>
         </fieldset>
-        <fieldset> 
-            <legend> Esportes Favoridos </legend>
-            <input type="checkbox" name="esportebasquete" id="iesportebasquete"> 
+        <fieldset>
+            <legend> Esportes Favoridos</legend>
+            <input 
+                type="checkbox" 
+                name="esportebasquete" id="iesportebasquete"
+            > 
             <label for="iesportebasquete"> Basquete </label>  <br>
-
-            <input type="checkbox" name="esportefutebol" id="iesportefutebol"> 
+            <input 
+                type="checkbox" 
+                name="esportefutebol" id="iesportefutebol"
+            > 
             <label for="iesportefutebol"> Futebol </label> <br>
-
-            <input type="checkbox" name="esportenatacao" id="iesportenatacao" checked> 
+            <input 
+                type="checkbox" 
+                name="esportenatacao" id="iesportenatacao" 
+                checked
+            > 
             <label for="iesportenatacao"> Natação </label>  <br>
-
-            <input type="checkbox" name="esportebasquete" id="iesportetenis"> 
+            <input 
+                type="checkbox" 
+                name="esportebasquete" id="iesportetenis"
+            > 
             <label for="iesportetenis"> Tênis </label> <br>
-
-            <input type="checkbox" name="esportecorrida" id="iesportecorrida" checked>
+            <input 
+                type="checkbox" 
+                name="esportecorrida" id="iesportecorrida" 
+                checked
+            >
             <label for="iesportecorrida"> Corrida </label> <br>
         </fieldset>
 
@@ -128,3 +163,152 @@
     </form>
 </body>
 </html>
+<hr>
+<h2>Código HTML</h2>
+
+<pre>
+&lt;!DOCTYPE html>
+&lt;html lang="pt-br">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    &lt;title>Formulário - 005&lt;/title>
+    &lt;style>
+        :root {
+            --branco: #ffffff;
+            --preto: #000000;
+            --preto-mais-claro: #2b2b2b;
+            --branco-acinzentado: #e1dede;
+
+            --verde-botao-normal: #4CAF50;
+            --verde-botao-clicado: #3e8e41;
+            --amarelo-botao-normal: #acb506;
+            --amarelo-botao-clicado: #cac40c;
+            --vermelho-botao-normal: #c31b05;
+            --vermelho-botao-clicado: #f81403;
+        }
+
+        <span class="atencao3">fieldset</span>{
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: var(--branco-acinzentado);
+            box-shadow: 2px 2px 5px rgba(0,0,0,400);
+            margin-top: 8px;
+        }
+        <span class="atencao3">legend</span> {
+            color: var(--branco);
+            font-weight: bolder;
+            background-color: var(--preto-mais-claro);  
+            border-radius: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .botao-personalizado-enviar {
+            background-color: var(--verde-botao-normal);
+            border: none;
+            color: var(--branco);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .botao-personalizado-enviar:hover {            
+            transform: translate(-2px, -2px);
+            box-shadow: 2px 2px 5px rgba(0,0,0, 0.623);
+        }
+        .botao-personalizado-enviar:active {
+            background-color: var(--verde-botao-clicado);
+            box-shadow: 0px 0px 0px rgba(0,0,0, 0.623);
+            transform: translate(2px, 2px);
+        }
+
+        .botao-personalizado-limpar {
+            background-color: var(--amarelo-botao-normal);            
+            border: none;
+            color: var(--branco);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .botao-personalizado-limpar:hover {            
+            transform: translate(-2px, -2px);
+            box-shadow: 2px 2px 5px rgba(0,0,0, 0.623);
+        }
+        .botao-personalizado-limpar:active {
+            background-color: var(--amarelo-botao-clicado);
+            box-shadow: 0px 0px 0px rgba(0,0,0, 0.623);
+            transform: translate(2px, 2px);
+        }
+
+        .botao-personalizado-cancelar {
+            background-color: var(--vermelho-botao-normal);
+            border: none;
+            color: var(--branco);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .botao-personalizado-cancelar:hover {            
+            transform: translate(-2px, -2px);
+            box-shadow: 2px 2px 5px rgba(0,0,0, 0.623);
+            
+        }
+        .botao-personalizado-cancelar:active {
+            background-color: var(--vermelho-botao-clicado);
+            box-shadow: 0px 0px 0px rgba(0,0,0, 0.623);
+            transform: translate(2px, 2px);
+        }
+    &lt;/style>
+&lt;/head>
+&lt;body>
+    &lt;h1> Exemplo de Formulário 005&lt;/h1>
+    &lt;form action="cadastro.php" method="get" autocomplete="on">
+        &lt;<span class="atencao3">fieldset</span>>
+            &lt;<span class="atencao3">legend</span>> Sexo &lt;/legend>
+            &lt;input type="<span class="atencao3">radio</span>" <span class="atencao1">name</span>="<b>sexo</b>" id="isexomasculino"  <span class="atencao4">value="M"</span> <span class="atencao3">checked</span>> 
+            &lt;label for="isexomasculino"> Masculino &lt;/label> &lt;br>
+            &lt;input type="<span class="atencao3">radio</span>" <span class="atencao1">name</span>="<b>sexo</b>" id="isexofeminino" <span class="atencao4">value="F"</span>>
+            &lt;label for="isexofeminino"> Feminino &lt;/label> &lt;br>
+        &lt;<span class="atencao3">/fieldset</span>>
+        &lt;<span class="atencao3">fieldset</span>> 
+            &lt;<span class="atencao3">legend</span>> Esportes Favoridos &lt;/legend>
+            &lt;input type="<span class="atencao3">checkbox</span>" name="esportebasquete" id="iesportebasquete"> 
+            &lt;label for="iesportebasquete"> Basquete &lt;/label>  &lt;br>
+
+            &lt;input type="<span class="atencao3">checkbox</span>" name="esportefutebol" id="iesportefutebol"> 
+            &lt;label for="iesportefutebol"> Futebol &lt;/label> &lt;br>
+
+            &lt;input type="<span class="atencao3">checkbox</span>" name="esportenatacao" id="iesportenatacao" <span class="atencao3">checked</span>> 
+            &lt;label for="iesportenatacao"> Natação &lt;/label>  &lt;br>
+
+            &lt;input type="<span class="atencao3">checkbox</span>" name="esportebasquete" id="iesportetenis"> 
+            &lt;label for="iesportetenis"> Tênis &lt;/label> &lt;br>
+
+            &lt;input type="<span class="atencao3">checkbox</span>" name="esportecorrida" id="iesportecorrida" <span class="atencao3">checked</span>>
+            &lt;label for="iesportecorrida"> Corrida &lt;/label> &lt;br>
+        &lt;<span class="atencao3">/fieldset</span>>
+
+        &lt;p style="text-align: center;">
+            &lt;input type="submit" class="botao-personalizado-enviar" value="Enviar">
+            &lt;input type="reset" class="botao-personalizado-limpar" value="Limpar">
+            &lt;input type="reset" class="botao-personalizado-cancelar" value="Cancelar">
+        &lt;/p>        
+    &lt;/form>
+&lt;/body>
+&lt;/html>
+</pre>

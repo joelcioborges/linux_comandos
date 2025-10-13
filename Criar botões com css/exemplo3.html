@@ -17,6 +17,11 @@
             --amarelo-botao-clicado: #cac40c;
             --vermelho-botao-normal: #c31b05;
             --vermelho-botao-clicado: #f81403;
+
+            --sobra-botao-preto: #0000009f;
+            --sobra-botao-verde: #0432019f;
+            --sobra-botao-amarelo: #717101;
+            --sobra-botao-vermelho: #500101;
         }
 
         fieldset{
@@ -50,11 +55,12 @@
         }
         .botao-personalizado-enviar:hover {            
             transform: translate(-2px, -2px);
-            box-shadow: 2px 2px 5px rgba(0,0,0, 0.623);
+            /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.624); */
+            box-shadow: 2px 2px 5px var(--sobra-botao-verde);
         }
         .botao-personalizado-enviar:active {
             background-color: var(--verde-botao-clicado);
-            box-shadow: 0px 0px 0px rgba(0,0,0, 0.623);
+            box-shadow: 0px 0px 0px var(--sobra-botao-verde);
             transform: translate(2px, 2px);
         }
 
@@ -73,11 +79,11 @@
         }
         .botao-personalizado-limpar:hover {            
             transform: translate(-2px, -2px);
-            box-shadow: 2px 2px 5px rgba(0,0,0, 0.623);
+            box-shadow: 2px 2px 5px var(--sobra-botao-amarelo);
         }
         .botao-personalizado-limpar:active {
             background-color: var(--amarelo-botao-clicado);
-            box-shadow: 0px 0px 0px rgba(0,0,0, 0.623);
+            box-shadow: 0px 0px 0px var(--sobra-botao-amarelo);
             transform: translate(2px, 2px);
         }
 
@@ -96,12 +102,12 @@
         }
         .botao-personalizado-cancelar:hover {            
             transform: translate(-2px, -2px);
-            box-shadow: 2px 2px 5px rgba(0,0,0, 0.623);
+            box-shadow: 2px 2px 5px var(--sobra-botao-vermelho);
             
         }
         .botao-personalizado-cancelar:active {
             background-color: var(--vermelho-botao-clicado);
-            box-shadow: 0px 0px 0px rgba(0,0,0, 0.623);
+            box-shadow: 0px 0px 0px var(--sobra-botao-vermelho);
             transform: translate(2px, 2px);
         }
     </style>
@@ -186,6 +192,11 @@
             --amarelo-botao-clicado: #cac40c;
             --vermelho-botao-normal: #c31b05;
             --vermelho-botao-clicado: #f81403;
+
+            --sobra-botao-preto: #0000009f;
+            --sobra-botao-verde: #0432019f;
+            --sobra-botao-amarelo: #717101;
+            --sobra-botao-vermelho: #500101;
         }
 
         <span class="atencao3">fieldset</span>{
@@ -219,11 +230,12 @@
         }
         .botao-personalizado-enviar:hover {            
             transform: translate(-2px, -2px);
-            box-shadow: 2px 2px 5px rgba(0,0,0, 0.623);
+            /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.624); */
+            box-shadow: 2px 2px 5px var(-sobra-botao-verde);
         }
         .botao-personalizado-enviar:active {
             background-color: var(--verde-botao-clicado);
-            box-shadow: 0px 0px 0px rgba(0,0,0, 0.623);
+            box-shadow: 0px 0px 0px var(-sobra-botao-verde);
             transform: translate(2px, 2px);
         }
 
@@ -242,11 +254,11 @@
         }
         .botao-personalizado-limpar:hover {            
             transform: translate(-2px, -2px);
-            box-shadow: 2px 2px 5px rgba(0,0,0, 0.623);
+            box-shadow: 2px 2px 5px var(--sobra-botao-amarelo);
         }
         .botao-personalizado-limpar:active {
             background-color: var(--amarelo-botao-clicado);
-            box-shadow: 0px 0px 0px rgba(0,0,0, 0.623);
+            box-shadow: 0px 0px 0px var(--sobra-botao-amarelo);
             transform: translate(2px, 2px);
         }
 
@@ -265,12 +277,12 @@
         }
         .botao-personalizado-cancelar:hover {            
             transform: translate(-2px, -2px);
-            box-shadow: 2px 2px 5px rgba(0,0,0, 0.623);
+            box-shadow: 2px 2px 5px var(--sobra-botao-vermelho);
             
         }
         .botao-personalizado-cancelar:active {
             background-color: var(--vermelho-botao-clicado);
-            box-shadow: 0px 0px 0px rgba(0,0,0, 0.623);
+            box-shadow: 0px 0px 0px var(--sobra-botao-vermelho);
             transform: translate(2px, 2px);
         }
     &lt;/style>

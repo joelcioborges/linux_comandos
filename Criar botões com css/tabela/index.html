@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Botão em Tabela </title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        table {
+            /* border-collapse: collapse; */
+            width: 600px;
+        }
+
+        th {
+            font-size: 1.5em;
+            background-color: rgb(94, 94, 94);
+            color: white;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+        td:hover {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            /* transition-duration: 0.5s;             */
+        }
+
+        td:active {
+            /* Cor do botão ao ser clicado */
+            background-color: red;                  
+            transition: transform 0ms ease-out, background-color 0ms ease-out, box-shadow 0.2ms ease-out;
+            box-sizing: border-box; 
+            transform: translate(3px, 3px);
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <p id="meuParagrafo" onmouseover="mudarCor(this)" onmouseout="voltarCor(this)">
+        Passe o mouse sobre este texto.
+    </p>
+        <table>
+            <thead>
+                <th> Cabeçalho </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> Conteúdo 01 </td>
+                    <td> Função </td>
+                </tr>
+                <tr>
+                    <td> Conteúdo 01 </td>
+                    <td> Função </td>
+                </tr>
+                <tr>
+                    <td> Conteúdo 02 </td>
+                    <td> Função</td>
+                </tr>
+                <tr>
+                    <td> Conteúdo 03 </td>
+                    <td> Função</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <script>
+        // Função JavaScript para aplicar o novo estilo
+        function mudarCor(elemento) {
+            elemento.style.color = 'red';
+            elemento.style.fontWeight = 'bold';
+        }
+
+        // Função JavaScript para reverter o estilo quando o mouse sai
+        function voltarCor(elemento) {
+            elemento.style.color = 'black';
+            elemento.style.fontWeight = 'normal';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cd /etc/samba/smb.config</title>
+    <style>
+        * {
+            margin: 0px;            
+        }
+        :root {
+            --vermelho: #ff0000;
+            --azul1: #0000ff;
+            --azul2: #4949ff;            
+        }
+
+        body {
+            background-color: black;
+        }
+
+        header {
+            background-color: white;
+            border-radius: 10px 10px 0px 0px;
+            margin: 10px 10px 10px 10px;
+            padding: 0px 0px 0px 10px;            
+        }
+
+        main {
+            background-color: white;
+            margin: -5px 10px 10px 10px;
+            padding: 0px 0px 0px 10px;
+        }
+
+        .atencao1 {
+            font-weight: bold;
+            color: var(--vermelho);            
+        }
+        .atencao2 {
+            font-weight: normal;
+            color: var(--azul2);
+        }
+        .paragrafo {
+            text-indent: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">PROBLEMAS DE INICIALIZAÇÃO DA WEB CAM</h1>
+        <p>
+            Fonte: <a href="https://www.youtube.com/watch?v=KcVMI56UCGQ" target="_blank" rel="external">Luba Linux</a>
+        </p>        
+    </header>
+    <main>
+        <p>
+            <p class="paragrafo">
+                No Ubuntu mais recente (22.04+), o pipewire cuida da captura de vídeo. Reiniciá-lo pode resolver travamentos:
+                <pre>
+                    
+                    <b>systemctl --user restart pipewire</b>
+                    
+                    <b>snapshot</b>
+
+                    
+                </pre>
+        </p>
+    </main>
+</body>
+</html>
